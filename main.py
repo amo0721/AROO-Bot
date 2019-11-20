@@ -10,7 +10,7 @@ async def on_ready():
     
 @app.event
 async def on_member_join(member):
-    embed = discord.Embed(title="ㅎㅇㅎㅇ", description = None, color=0x0000ff)
+    embed = discord.Embed(title="ㅎㅇㅎㅇ 내 채널 ", description = None, color=0x0000ff)
     embed.add_field(name="닉넴 : " + (member.name), value="아이디 : " + (member.id))
     await app.send_message(app.get_channel(Setting.welcome_channel), embed=embed)
 
@@ -146,8 +146,8 @@ async def on_message(message):
                         
                 if message.content.startswith('/패치노트'):
                     embed = discord.Embed(title="업데이트 내역", color=0x00ff00)
-                    embed.add_field(name="●첫 신설 및 여러 버그 픽스 작업", value="처음 아루 봇을 만듬/테스트 도중 생기는 버그들 중 일부를 고침.")
-                    embed.add_field(name="●긴급수정:NONE", value="20191118 Update")
+                    embed.add_field(name="●말투 설정 및 봇 신설", value="처음 아루 봇을 만듬/봇의 컨셉에 맞게 말투를 조정함.")
+                    embed.add_field(name="●긴급수정:서버 안정화 작업", value="20191120 Update")
                     await app.send_message(message.channel, embed=embed)
 
                 if "/" in message.content:
@@ -157,7 +157,7 @@ async def on_message(message):
                     d = datetime.datetime.today().hour
                     e = datetime.datetime.today().minute
                     f = datetime.datetime.today().second
-                    embed=discord.Embed(title="Jenon Bot Command log", description=str(message.author.name), color=0x0000ff)
+                    embed=discord.Embed(title="AROO Bot Command log", description=str(message.author.name), color=0x0000ff)
                     embed.add_field(name="메세지 내용", value=(message.content))
                     embed.add_field(name="메세지 채널", value="<#" + str(message.channel.id) + ">")
                     embed.set_footer(text=str(a) + "년 " + str(b) + "월 " + str(c) + "일 " + str(d) + "시 " + str(e) + "분 " + str(f) + "초에 발신됨.")
