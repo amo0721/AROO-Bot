@@ -162,7 +162,7 @@ async def on_message(message):
                     embed.add_field(name="메세지 채널", value="<#" + str(message.channel.id) + ">")
                     embed.set_footer(text=str(a) + "년 " + str(b) + "월 " + str(c) + "일 " + str(d) + "시 " + str(e) + "분 " + str(f) + "초에 발신됨.")
                     await app.send_message(app.get_channel(Setting.err_loging_channel), embed=embed)
-                    print("Jenon Bot Command Use Log\n발신자:" + str(message.author.name) + "\n발신 서버 : " + str(message.server.name) + "\n내용 : " + str(message.content) % ())
+                    print("AROO Bot Command Use Log\n발신자:" + str(message.author.name) + "\n발신 서버 : " + str(message.server.name) + "\n내용 : " + str(message.content) % ())
 
 access_token = os.environ["BOT_TOKEN"]
 app.run(access_token)
