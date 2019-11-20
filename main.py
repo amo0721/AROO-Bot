@@ -37,7 +37,7 @@ async def on_message(message):
     
                 if message.content.startswith('-게임'):
                     if message.author.server_permissions.administrator:
-                        learn = message.content.replace('/게임', "")
+                        learn = message.content.replace('-게임', "")
                         await app.change_presence(game=discord.Game(name=learn))
                         await app.send_message(message.channel, "게임 바꾸긴 바꿈 근데 노잼일듯")
 
